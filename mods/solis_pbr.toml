@@ -32,6 +32,23 @@ categories = ["realistic", "pbr", "atmosphere"]
 screenshots = ["screenshots/solis_pbr/1.jpg", "screenshots/solis_pbr/2.jpg", "screenshots/solis_pbr/3.jpg", "screenshots/solis_pbr/8.jpg"]
 
 [[versions]]
+version = "1.1.5"
+published = "2026-11-23"
+game = "26.3"
+file = "solis_pbr-1.1.5.hshader"
+sha256 = "90d8458fa8d2d299bf9c93dc1284b5dd93a256ddd3ca746419df23ce106c78a2"
+changelog = """
+Solis PBR 1.1.5 — Astronomical & Volcanic Nether Update:
+- Morning 22-deg Ice-Crystal Halo, Twin Sundogs (Parhelia), Parhelic Circle & Circumzenithal Arc (/time set 1200)
+- Great Comet C/Solis with C2 emerald coma, curved golden Mie dust tail & straight blue CO+ ion tail (/time set 13200)
+- Galactic Supernova, Hubble V838 / SN 1987A Light-Echo Nebula & Perseid meteor shower (/time set 15500)
+- Total Lunar Eclipse Copper-Red Blood Supermoon with Earth umbra & Chappuis turquoise ozone rim (/time set 18000)
+- Extreme G5 Geomagnetic Storm with crimson SAR & emerald magnetic-zenith corona aurora (/time set 20500)
+- Post-rain 42/51-deg Double Rainbow & Alexander's Dark Band + intracloud storm sheet-lightning
+- Full Volcanic Nether PBR Overhaul (Pahoehoe basalt-crusted molten lava, 3D volumetric biome fog, GGX specular & thermal heat mirage)
+- Fixed Gargantua photon-sphere capture at small black hole scales and opaque convective magma when submerged in lava"""
+
+[[versions]]
 version = "1.1.0"
 published = "2026-11-23"
 game = "26.3"

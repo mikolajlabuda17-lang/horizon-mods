@@ -1,0 +1,40 @@
+id = "momawds_optimization"
+kind = "mod"
+name = "Momawd's Optimization Mod"
+summary = "All-in-one client FPS and world TPS optimizer with presets, XP clumping, and optional FPS/MSPT mini-HUD."
+description = """
+Sandboxed WebAssembly (`.hmod`) all-in-one **client FPS + world/server TPS** optimization mod built for **Horizon 26.3** (`api = "0.2"`, `side = "both"`).
+
+## Client FPS & Frame-Time Optimizations
+- **Dynamic Background, Minimized & Menu FPS Governor:** Automatically lowers framerate while the game window is unfocused (`5–60 FPS` configurable) and drops to `1 FPS` while minimized to cut background GPU power and heat. Caps idle menu FPS in Competitive (`120`) and Max FPS (`60`) profiles.
+- **Distance Item-Frame 3D Content Culling:** Skips drawing expensive 3D item and map models inside distant item frames (`48m` / `32m` / `18m` by preset, tightening automatically under active `< 45 FPS` pressure) while keeping the item frame itself visible.
+- **Adaptive Ambient Swirl & Crowd Name-Tag Relief:** Suppresses redundant ambient beacon swirls and crowd armor-stand name-tag overdraw under load without revealing hidden effects, hidden name tags, or hiding player name tags.
+
+## World & Server TPS Optimizations *(Off by Default — Opt-In)*
+> **Multiplayer Warning:** Both world/server simulation optimizations below (**Lossless XP Orb Clumping** and **Adaptive MSPT & Explosion Guard**) are **off by default** because they modify XP pickup/cooldown and server simulation behavior. Please check multiplayer server rules before enabling them.
+
+- **Lossless `u128` XP Orb Clumping & Instant Pickup** *(default: Off)*: Merges nearby experience orbs of any denomination into exact saved-NBT `(i16 Value, i32 Count)` representations with zero lost XP points, collapses multi-count orbs on pickup, and clears XP pickup cooldowns.
+- **Adaptive MSPT Wildlife Pacer & Chain-Explosion Guard** *(default: Off)*: Leaves healthy server ticks untouched; during MSPT spikes above your preset's threshold, deterministically phase-staggers ambient wildlife (`bat`, `cod`, `salmon`, `tropical_fish`, `tadpole`, `squid`, `glow_squid`) and caps redundant trailing entity blast-exposure walks on the 4th+ simultaneous explosion in a single tick.
+
+## Settings & Mini-HUD
+Configure live in **Options > Mods > Momawd's Optimization Mod > Config** (English & Polish):
+- **Presets:** `Balanced` / `Competitive` / `Max FPS`
+- **Mini-HUD:** `Off` / `Compact (FPS + MSPT)` / `Detailed (FPS + 1% Low + MSPT + Optimizations)` with selectable screen corner and automatic yield to `F3`.
+"""
+authors = ["Momawd"]
+owners = ["mikolajlabuda17-lang"]
+owner_ids = [224315142]
+license = "MIT"
+source = "https://github.com/mikolajlabuda17-lang/momawds-optimization"
+icon = "icons/momawds_optimization.png"
+categories = ["utility"]
+tags = ["optimization", "fps", "tps", "performance", "xp", "hud"]
+screenshots = ["screenshots/momawds_optimization/1.png", "screenshots/momawds_optimization/2.png", "screenshots/momawds_optimization/3.png"]
+
+[[versions]]
+version = "1.0.0"
+published = "2026-11-22"
+game = "26.3"
+file = "momawds_optimization-1.0.0.hmod"
+sha256 = "0801390cd888c89cf0f0f392f881ac96cd500c7d5dc3d8dcd4fb3dd49a13e90a"
+changelog = "Initial release: sandboxed WebAssembly all-in-one client FPS and world TPS optimization mod with presets, settings page, lossless XP orb clumping, adaptive MSPT & explosion guard, and optional FPS/1% low/MSPT mini-HUD."
